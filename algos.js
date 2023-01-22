@@ -64,3 +64,46 @@ console.log(ana("doggo", "gggod"))
 
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
+var maxProfit = function(prices) {
+    let low = Math.min(...prices)
+   // let day = prices.indexOf(low)
+   let newArray = [];
+   
+   for(let i = 0; i < prices.length; i++){
+     
+     let buyDay = prices[i] == low
+
+    if(buyDay){
+     let lowest = prices[i];
+     let last = prices[prices.length -1]
+     // console.log(last)
+     if(lowest == last){
+        console.log('no lower than this')
+       return lowest = 0
+     }
+     else{
+       console.log('can still profit')
+     for(let j = lowest; j < prices.length; j++){
+       newArray.push(prices[j])
+     
+      }
+       // console.log(newArray)
+       
+     }
+     for(let k =0; k < newArray.length; k++){
+       let max = Math.max(...newArray)
+       let sellDay = newArray[k] == max
+       if(sellDay){
+         let largest = newArray[k]
+         // console.log(largest)
+         let prof = largest - lowest
+       return prof
+         // console.log(newArray[k])
+       }
+ 
+     }
+       
+      }
+     //  console.log(newArray)
+   }
+};
