@@ -16,3 +16,22 @@ var containsDuplicate = function(nums) {
  
 //  You can return the answer in any order.
 
+var twoSum = function(nums, target) {
+    let sum = [];
+   for(let i = 0; i < nums.length; i++){
+       for(let j = 0; j < i; j++){
+           // console.log(arr[i])
+           let adding = nums[i] + nums[j];
+           if(adding == target){
+            sum.push(j)
+            sum.push(i)
+           console.log(sum)
+           }
+  
+       }
+   }
+
+
+   return sum;
+   
+};
