@@ -42,3 +42,16 @@ var twoSum = function(nums, target) {
 
 // An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
+function ana(s, t){
+    let string1 = s.split('').sort().join('')
+    let string2 = t.split('').sort().join('')
+    const length = string1.length === string2.length;
+
+    if(!length)
+        return false;
+    return string1 === string2
+    
+
+
+}
+console.log(ana("doggo", "gggod"))
