@@ -1,3 +1,5 @@
+// Contains Duplicate
+
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
 var containsDuplicate = function(nums) {
@@ -9,7 +11,7 @@ var containsDuplicate = function(nums) {
      return found.size !== nums.length;
  };
 
-// -----
+// Two Sum
 //  Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 //  You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -20,7 +22,6 @@ var twoSum = function(nums, target) {
     let sum = [];
    for(let i = 0; i < nums.length; i++){
        for(let j = 0; j < i; j++){
-           // console.log(arr[i])
            let adding = nums[i] + nums[j];
            if(adding == target){
             sum.push(j)
@@ -36,7 +37,7 @@ var twoSum = function(nums, target) {
    
 };
 
-// -------
+// Valid Anagram
 
 // Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
@@ -107,3 +108,53 @@ var maxProfit = function(prices) {
      //  console.log(newArray)
    }
 };
+
+function fizzbuzz(num) {
+    for(let num = 1; num < 20; num++) {
+        if (num % 3 == 0 && num % 5 == 0) {
+        console.log("fizzbuzz")
+        }
+
+        else if (num % 3 == 0) {
+            console.log("fizz")
+        }
+        
+        else if (num % 5 == 0) {
+            console.log("buzz")
+        }
+        else {
+            console.log(num)
+        }
+}
+}
+console.log(fizzbuzz(20))
+
+var romanToInt = function(s) {
+    let table = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    }
+    
+    let result = 0;
+    for (let i = 0; i < s.length; i++) {
+        //if the next roman numeral is larger, then we know we have to subtract this number
+        if (table[s[i]] < table[s[i+1]]) {
+            result-=table[s[i]]
+        } 
+        //otherwise, add like normal. 
+        else {
+            result+=table[s[i]]
+        }
+    }
+    return result
+    
+};
+
+// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
