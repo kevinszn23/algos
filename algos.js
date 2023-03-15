@@ -11,6 +11,12 @@ var containsDuplicate = function(nums) {
      return found.size !== nums.length;
  };
 
+var containsDuplicate = function(nums) {
+    
+ };
+
+
+
 // Two Sum
 //  Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -169,3 +175,4 @@ let groupAnagrams = function(strs) {
 };
 // Time Complexity: O(n*klog(k)) where n is the length of input array and k is the maximum length of a string in input array
 // Space Complexity: O(n)
+
