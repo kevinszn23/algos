@@ -183,7 +183,16 @@ let groupAnagrams = function(strs) {
 };
 
 let groupAnagrams = function(strs) {
-    
+    let hash = {};
+    for (let str of strs) {
+        let letters = str.split("").sort().join("");
+        if (hash[letters]) {
+            hash[letters].push(str)
+        } else {
+            hash[letters] = [str]
+        }
+    }
+    return Object.values(hash)
 };
 
 // Time Complexity: O(n*klog(k)) where n is the length of input array and k is the maximum length of a string in input array
