@@ -12,7 +12,15 @@ var containsDuplicate = function(nums) {
  };
 
 var containsDuplicate = function(nums) {
-    
+    let hashmap = {}
+    for (let i = 0; i < nums.length; i++) {
+        if (!hashmap[nums[i]]) {
+            hashmap[nums[i]] = 1
+        } else {
+            return true
+        }
+    }
+    return false
  };
 
 
