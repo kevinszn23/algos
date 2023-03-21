@@ -202,5 +202,10 @@ let groupAnagrams = function(strs) {
 // Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
 var topKFrequent = function(nums, k) {
-    
+
 };
+
+// Valid Anagram
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+// Given a string s, return true if it is a palindrome, or false otherwise.
+
